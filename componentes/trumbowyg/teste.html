@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
+	
+    <link rel="stylesheet" href="dist/ui/trumbowyg.min.css">
+
+	
+	<link rel="stylesheet" href="dist/plugins/colors/ui/trumbowyg.colors.min.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/Alex-D/Trumbowyg/v2.5.1/dist/plugins/colors/ui/trumbowyg.colors.min.css">
+	<link rel="stylesheet" href="//cdn.rawgit.com/Alex-D/Trumbowyg/v2.5.1/dist/ui/trumbowyg.min.css">   
+    
+    <link rel="stylesheet" href="dist/plugins/colors/ui/trumbowyg.colors.css">
+    <script src="dist/trumbowyg.js"></script>
+    <script src="dist/langs/pt.min.js"></script>
+	
+    <script src="dist/plugins/upload/trumbowyg.upload.js"></script>
+	<script src="dist/plugins/colors/trumbowyg.colors.js"></script>
+
+	<title></title>
+</head>
+<body>
+
+<div id="editor"></div>
+<script type="text/javascript">
+
+
+  $('#editor')
+            .trumbowyg({
+            	lang: 'pt',
+                btnsDef: {
+                    // Create a new dropdown
+                    image: {
+                        dropdown: ['insertImage', 'upload','insertImageServer'],
+                        ico: 'insertImage',                        
+                    },
+
+                },
+                // Redefine the button pane
+                btns: ['viewHTML',
+                        '|', 'formatting',
+                        '|', 'btnGrp-semantic',
+                        '|','foreColor',
+        				'|', 'backColor',
+                        '|', 'link',
+                        '|', 'image',
+                        '|', 'btnGrp-justify',
+                        '|', 'btnGrp-lists',
+                        '|', 'horizontalRule',
+                        '|', 'viewHTML',
+                        '|', 'formatting',
+        		        '|', 'superscript',
+        		        '|', 'subscript',
+        		        '|', 'removeformat', 
+        				'|', 'fullscreen',  
+        				
+                      ],
+                autogrow: true ,
+                btnsAdd: ['foreColor', 'backColor'],
+            });
+
+$('#editor').trumbowyg('html', "<p>Your content here</p>");
+</script>
+</body>
+</html>
